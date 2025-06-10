@@ -1,10 +1,7 @@
-import styles from "./page.module.css";
-import LoginForm from "@/components/LoginForm/LoginForm";
+import { getAllLocations } from "@/db/repository";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <LoginForm />
-    </div>
-  );
+export default async function Home() {
+  const locations = await getAllLocations();
+
+  return <>Test</>;
 }
